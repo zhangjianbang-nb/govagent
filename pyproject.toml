@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "govagent"
+name = "govagent-cn"
 version = "0.1.0"
 description = "政务服务智能体框架：意图路由 + 工具调用 + 政策知识库 BM25 检索 + 可选 LLM ReAct"
 readme = "README.md"

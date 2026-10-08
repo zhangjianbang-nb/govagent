@@ -16,7 +16,7 @@ LLM 可选（任何 OpenAI 兼容端点），未配置时走确定性规划器�
 ## 快速开始
 
 ```bash
-pip install govagent          # 或 pip install -e ".[server,dev]"
+pip install govagent-cn       # 或 pip install -e ".[server,dev]"
 ```
 
 ### Python API（离线模式，无需任何 Key）
@@ -42,7 +42,7 @@ govagent --trace "公积金贷款利率"    # 输出工具调用轨迹
 ### HTTP 服务
 
 ```bash
-pip install "govagent[server]"
+pip install "govagent-cn[server]"
 uvicorn govagent.server:app --port 8300
 curl -X POST localhost:8300/ask -H "Content-Type: application/json" \
      -d '{"query": "居住证怎么办理"}'
@@ -100,7 +100,7 @@ AgentReply(text, intent, tools_used, citations)
 ## 测试
 
 ```bash
-pip install -e ".[dev]"
+pip install -e ".[dev]"  # 本地开发
 pytest tests/ -q          # 21 tests
 python examples/demo.py   # 端到端演示
 ```
