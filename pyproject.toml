@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "govagent"
+version = "0.1.0"
+description = "政务服务智能体框架：意图路由 + 工具调用 + 政策知识库 BM25 检索 + 可选 LLM ReAct"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "jianbangzhang" }]
+keywords = ["govtech", "agent", "rag", "chatbot"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+server = ["fastapi>=0.110", "uvicorn>=0.29"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+govagent = "govagent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["govagent*"]
+
+[tool.setuptools.package-data]
+govagent = ["policies/*.json"]
